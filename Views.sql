@@ -39,22 +39,4 @@ FROM produtos_vendidos pv
 JOIN pasteis p ON pv.id_produto = p.id
 GROUP BY p.categoria;
 
-SELECT * FROM View_Clientes;
 
-SELECT * FROM View_Pedidos;
-
-SELECT * FROM View_Recheios;
-
-SELECT * FROM pedidos_clientes;
-
-SELECT * FROM pasteis_e_recheios;
-
-SELECT * FROM pasteis_vendidos_mais_de_2;
-
-SELECT * FROM pedidos_pagos_em_dinheiro;
-
-SELECT * FROM pasteis_veganos;
-
-SELECT * FROM clientes_menores_de_18;
-
-SELECT * FROM total_vendas_por_categoria;
