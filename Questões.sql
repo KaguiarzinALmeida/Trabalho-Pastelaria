@@ -37,3 +37,7 @@ FROM pasteis p
 JOIN pasteis_recheios pr ON p.id = pr.id_pastel
 JOIN recheios r ON pr.id_recheio = r.id
 WHERE r.nome = 'Bacon' OR r.nome = 'Queijo';
+
+SELECT SUM(p.preco * pv.quantidade) AS valor_total_vendas
+FROM produtos_vendidos pv
+JOIN pasteis p ON pv.id_produto = p.id;
