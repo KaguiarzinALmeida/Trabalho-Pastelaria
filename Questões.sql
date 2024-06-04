@@ -41,3 +41,24 @@ WHERE r.nome = 'Bacon' OR r.nome = 'Queijo';
 SELECT SUM(p.preco * pv.quantidade) AS valor_total_vendas
 FROM produtos_vendidos pv
 JOIN pasteis p ON pv.id_produto = p.id;
+
+SELECT DISTINCT pe.id AS id_pedido
+FROM pedidos pe
+JOIN produtos_vendidos pv_pastel ON pe.id = pv_pastel.id_pedido
+JOIN produtos_vendidos pv_bebida ON pe.id = pv_bebida.id_pedido
+JOIN pasteis p_pastel ON pv_pastel.id_produto = p_pastel.id
+JOIN pasteis p_bebida ON pv_bebida.id_produto = p_bebida.id
+WHERE p_pastel.categoria = 'Pastel'
+AND p_bebida.categoria = 'Bebida';
+  
+SELECT 
+    p.nome AS nome_pastel,
+    SUM(pv.quantidade) AS quantidade_vendas
+FROM 
+    produtos_vendidos pv
+JOIN 
+    pasteis p ON pv.id_produto = p.id
+GROUP BY 
+    p.nome
+ORDER BY 
+    quantidade_vendas DESC;
