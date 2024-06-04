@@ -31,3 +31,9 @@ ORDER BY
     ano DESC,
     mes DESC,
     total_pedidos DESC;
+    
+    SELECT DISTINCT p.nome AS nome_pastel
+FROM pasteis p
+JOIN pasteis_recheios pr ON p.id = pr.id_pastel
+JOIN recheios r ON pr.id_recheio = r.id
+WHERE r.nome = 'Bacon' OR r.nome = 'Queijo';
