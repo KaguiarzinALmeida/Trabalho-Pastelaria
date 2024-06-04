@@ -52,6 +52,6 @@ CREATE TABLE produtos_vendidos(
      id_produto INT, 
      quantidade INT,
      
-     FOREIGN KEY (id_pedido) REFERENCES pedidos (id),
-	 FOREIGN KEY (id_produto) REFERENCES pasteis (id)
+     FOREIGN KEY (id_pedido) REFERENCES pedidos(id),
+	 FOREIGN KEY (id_produto) REFERENCES pasteis(id)
 );

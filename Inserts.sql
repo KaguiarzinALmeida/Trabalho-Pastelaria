@@ -72,8 +72,13 @@ VALUES
 ('Berinjela'),
 ('Pimentão');
 
-INSERT INTO pasteis_recheios (id_pastel, id_recheio) 
-SELECT id_pastel, id_recheio FROM pasteis_recheios;
+INSERT INTO pasteis_recheios (id_pastel, id_recheio)
+VALUES
+(1, 1), 
+(1, 2), 
+(3, 3), 
+(5, 5), 
+(5, 2); 
 
 
 INSERT INTO pedidos (id_cliente, data_pedido, forma_pagamento) 
@@ -89,8 +94,15 @@ VALUES
 (1, '2024-05-16', 'Cartão de Débito'),
 (2, '2024-05-15', 'Dinheiro');
 
-INSERT INTO produtos_vendidos (id_pedido, id_produto, quantidade) 
-SELECT id_pedido, id_produto, quantidade FROM produtos_vendidos;
+INSERT INTO produtos_vendidos (id_pedido, id_produto, quantidade)
+VALUES
+(1, 1, 2), 
+(2, 3, 1), 
+(3, 5, 3),
+(4, 10, 2),
+(5, 15, 1),
+(6, 11, 4),
+(7, 13, 5); 
 
 SELECT * FROM clientes;
 

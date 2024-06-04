@@ -1,7 +1,7 @@
 USE stop_pastelaria;
 
 
-INSERT INTO clientes (nome_completo, nome_a_ser_chamado, cpf, data_nascimento, telefone, email, bairro, cidade, estado)
+INSERT INTO clientes(nome_completo, nome_a_ser_chamado, cpf, data_nascimento, telefone, email, bairro, cidade, estado)
 VALUES 
 ( ' Ana Santos ' , ' Ana ' , ' 111.222.333-44 ' , '10 /03/1988 ' , ' (11) 1111-2222 ' , ' ana@example.com ' , ' Vila Madalena ' , ' São Paulo ' , ' SP ' ),
 ( ' Carlos Lima ' , ' Carlos ' , ' 555.666.777-88 ' , '22 /07/1995 ' , ' (11)3333-4444 ' , ' carlos@example.com ' , ' Pinheiros ' , ' São Paulo ' , ' SP ' ),
