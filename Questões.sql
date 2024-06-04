@@ -1,5 +1,13 @@
 USE stop_pastelaria;
 
+SELECT DISTINCT p.nome AS nome_pastel
+FROM produtos_vendidos pv
+JOIN pedidos pe ON pv.id_pedido = pe.id
+JOIN clientes c ON pe.id_cliente = c.id
+JOIN pasteis p ON pv.id_produto = p.id
+WHERE p.categoria = 'Vegano' 
+AND YEAR(CURDATE()) - YEAR(c.data_nascimento) >= 18;
+
 SELECT 
     c.id,
     c.nome_completo,
